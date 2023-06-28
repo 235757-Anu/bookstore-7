@@ -1,0 +1,29 @@
+<div class="body">
+  <div class="container">
+    <div class="left">
+      <img [src]="book.imageUrl" [alt]="book.title" width="100%">
+    </div>
+    <div class="right">
+      <div *ngIf="successMessage" class="alert alert-success text-top">
+        {{ successMessage }}
+      </div>
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" [(ngModel)]="book.title">
+      </div>
+      <div class="form-group">
+        <label>Author</label>
+        <input type="text" class="form-control" [(ngModel)]="book.author">
+      </div>
+      <div class="form-group">
+        <label>Publish Year</label>
+        <input type="text" class="form-control" [(ngModel)]="book.publishYear">
+      </div>
+      <div class="form-group">
+        <label>Summary</label>
+        <textarea class="form-control" rows="4" [(ngModel)]="book.summary"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="updateBook()">Update</button>
+    </div>
+  </div>
+</div>

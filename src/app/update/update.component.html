@@ -1,0 +1,102 @@
+<div class="header">
+  <div class="logo-container">
+    <div class="logo"><img src="assets/2.png" alt="Logo"></div>
+    <div class="links">
+      <a href="/read">View</a>
+      <a href="/delete">&nbsp;Delete</a>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a routerLink="/admin" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+      <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+    </svg>&nbsp;&nbsp;Home</a></li>
+    <li><button  class="btn btn-dark" routerLink=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+      <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+    </svg>&nbsp;&nbsp;Logout</button></li>
+  </ul>
+</div>
+<div class="body">
+  <div class="container">
+    <div class="search-container mt-9">
+      <div class="form-group col mt-2 mb-2">
+        <div class="Searchbutton">
+          <input type="text" name="title" class="form-control" value="" placeholder="Search here...">
+          <div class="button">
+            <button class="btn btn-dark mb-10">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-2" *ngFor="let b of books">
+      <div class="row align-items-center">
+        <div class="col-sm-2">
+          <img [src]="b.imageUrl" width="100%">
+        </div>
+        <div class="col-sm-10">
+          <div class="card-body">
+            <h5 class="card-title">{{ b.title }}</h5>
+            <p class="my-1 text-muted">
+              <strong>Authors:</strong> {{ b.author }}
+            </p>
+            <p class="my-1 text-muted">
+              <strong>Publish Year:</strong> {{ b.publishYear }}
+            </p>
+            <p class="my-1 text-muted">
+              <strong>Page Count:</strong> {{ b.pageCount }}
+            </p>
+            <p class="my-1 text-muted">
+              <strong>Language:</strong> {{ b.language }}
+            </p>
+            <p class="my-1">
+              <strong>Summary:</strong>
+            </p>
+            <p class="my-1">
+              {{ b.summary }}
+            </p>
+            <button type="button" (click)="toUpdate(b)" class="btn btn-outline-secondary">
+              <span class="m-2">Update</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="card mb-2" *ngFor="let b of books">
+    <div class="row align-items-center">
+      <div class="col-sm-2">
+        <img [src]="b.imageUrl" width="100%">
+      </div>
+      <div class="col-sm-10">
+        <div class="card-body">
+          <h5 class="card-title">{{ b.title }}</h5>
+          <p class="my-1 text-muted">
+            <strong>Authors:</strong> {{ b.author }}
+          </p>
+          <p class="my-1 text-muted">
+            <strong>Publish Year:</strong> {{ b.publishYear }}
+          </p>
+          <p class="my-1 text-muted">
+            <strong>Page Count:</strong> {{ b.pageCount }}
+          </p>
+          <p class="my-1 text-muted">
+            <strong>Language:</strong> {{ b.language }}
+          </p>
+          <p class="my-1">
+            <strong>Summary:</strong>
+          </p>
+          <p class="my-1">
+            {{ b.summary }}
+          </p>
+  
+          <button type="button" (click)="toUpdate(b)" class="btn btn-outline-secondary">
+            <span class="m-2">Update</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->

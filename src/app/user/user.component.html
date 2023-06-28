@@ -1,0 +1,37 @@
+<div class="header">
+  <div class="logo-container">
+    <div class="logo"><img src="assets/2.png" alt="Logo"></div>
+  </div>
+  <ul class="nav-links">
+    <li><a routerLink="home" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+      <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
+    </svg>&nbsp;&nbsp;ReadList</a></li>
+    <li><button  class="btn btn-dark" routerLink=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+      <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+    </svg>&nbsp;&nbsp;Logout</button></li>
+  </ul>
+</div>
+
+<div class="body">
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let b of books; let i = index;">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card d-flex flex-column my-3"> 
+            <img class="card-img-top" [src]="b.imageUrl" alt="Card image cap" style="height: 400px;">
+            <div class="card-body flex-grow-1">
+         
+              <button type="button" (click)="toRead(b)" class="btn btn-dark" routerLink="/readbook">
+                <span class="m-2">View</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

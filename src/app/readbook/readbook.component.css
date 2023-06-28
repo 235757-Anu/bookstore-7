@@ -1,0 +1,136 @@
+.body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/7.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:host {
+    color: white;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-muted {
+    color: #aaa;
+}
+
+strong {
+    font-weight: bold;
+}
+
+img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.row {
+    width: 100vw;
+}
+
+button {
+    width: 20%;
+    margin: 2px 7px;
+    background-color: rgb(213, 209, 209);
+}
+
+.cl {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 20px auto;
+    width: 70vw;
+    height: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    box-shadow: 0 0 80px 8px rgb(10, 10, 10);
+}
+
+.right {
+    padding: 30px;
+    overflow: hidden;
+    width: 100%;
+}
+
+h1 {
+    font-size: 7vmax;
+    line-height: 1;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .header .logo img {
+    width: 100px;
+    margin-right: 10px;
+  }
+  
+  .header .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .header .nav-links li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .header .nav-links li a.btn {
+    border-radius: 12px;
+    padding: 8px 16px;
+  }

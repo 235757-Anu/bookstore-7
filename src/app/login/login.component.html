@@ -1,0 +1,40 @@
+<div class="body">
+  <div class="container">
+    <div class="left">
+      <h1>Bookpedia</h1>
+    </div>
+    <div class="right">
+      <h3>Login</h3>
+      <div class="inputs">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <span id="errorMessage" style="color: red;" class="con">{{ errorMessage }}</span>
+          <input type="text" formControlName="username" class="form-control" placeholder="Username">
+          <input type="password" formControlName="password" class="form-control" placeholder="Password">
+          <p>Don't have an account? <a href="a" routerLink="/register">Create an Account</a></p>
+          <div class="submit">
+            <button type="submit" class="btn btn-dark">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="body">
+    <div class="container">
+      <div class="col-md-6" style="background-color: white; width: 35vw;">
+        <div class="right">
+          <h3 class="p-5">Login</h3>
+          <div class="inputs">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+              <span id="errorMessage" style="color: red;" class="con">{{ errorMessage }}</span>
+              <input type="text" formControlName="username" class="form-control" placeholder="Username">
+              <input type="password" formControlName="password" class="form-control" placeholder="Password">
+              <button type="submit">Login</button>
+            </form>
+          </div>
+          <p>Don't have an account? <a href="a" routerLink="/register">Create an Account</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->

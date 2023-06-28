@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="c">
+    <div class="scroll">
+      <div class="listtgroup">
+        <div class="listtgroup">
+          <div class="list-group">
+            <ng-container *ngIf="books.length > 0;">
+              <div class="card mb-2" *ngFor="let b of books">
+                <div class="row align-items-center">
+                  <div class="col-sm-2">
+                    <img [src]="b.imageUrl" width="100%">
+                  </div>
+                  <div class="col-sm-10">
+                    <div class="card-body">
+
+                      <h5 class="card-title">{{ b.title }}</h5>
+                      <p class="my-1 text-muted">
+                        <strong>Authors:</strong> {{ b.author }}
+                      </p>
+                      <p class="my-1 text-muted">
+                        <strong>Publish Year:</strong> {{ b.publishYear }}
+                      </p>
+                      <p class="my-1 text-muted">
+                        <strong>Page Count:</strong> {{ b.pageCount }}
+                      </p>
+                      <p class="my-1 text-muted">
+                        <strong>Language:</strong> {{ b.language }}
+                      </p>
+                      <p class="my-1">
+                        <strong>Summary:</strong>
+                      </p>
+                      <p class="my-1">
+                        {{ b.summary }}
+                      </p>
+                      <button type="button" class="btn btn-outline-secondary" (click)="toAdd(b)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          viewBox="0 0 24 24">
+                          <path d="M12 4v16m8-8H4" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                          </path>
+                        </svg>
+                        <span class="m-2">Add</span>
+                      </button>
+                      <button type="button " (click)="toView(b)" class="btn btn-outline-secondary" routerLink="/view">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                          viewBox="0 0 24 24">
+                          <path
+                            d="M12 5a7 7 0 0 1 7 7c0 3.866-3.134 7-7 7s-7-3.134-7-7a7 7 0 0 1 7-7zm0 2a5 5 0 0 0-5 5c0 2.761 2.239 5 5 5s5-2.239 5-5a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3c0 1.654-1.346 3-3 3s-3-1.346-3-3a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1c0 .552.448 1 1 1s1-.448 1-1a1 1 0 0 0-1-1z" />
+                        </svg>
+                        <span class="m-2">View</span>
+                      </button>
+                      <div *ngIf="successMessage" class="message-box success-message">
+                        <div class="message-content">
+                          {{ successMessage }}
+                        </div>
+                      </div>
+
+                      <div *ngIf="errorMessage" class="message-box error-message">
+                        <div class="message-content">
+                          {{ errorMessage }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+            <ng-container *ngIf="books.length === 0">
+              <div style="color: white; font-weight: 800; ">
+                No records found.
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

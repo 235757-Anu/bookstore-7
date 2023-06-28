@@ -1,0 +1,36 @@
+<div class="body">
+    <div class="container" style="height: 100vh;">
+        <div class="row justify-content-center mt-10">
+            <div class="col-md-6 mt-5">
+                <div class="p-5" style="background-color: white; opacity: 80%; border-radius: 20px;">
+                    <h1 class="mb-3 p-2" style="color: black; font-family: 'Red Hat Display', sans-serif; font-size: 2rem;">Sign Up</h1>
+                    <form (ngSubmit)="alert()" #signupForm="ngForm">
+                        <div class="form-group pb-4">
+                            <label for="username" class="h4">Username<span style="color: red;">*</span></label>
+                            <input type="text" class="form-control form-control-lg" id="username" [(ngModel)]="name" name="username" required #usernameNgModel="ngModel">
+                            <div *ngIf="usernameNgModel.invalid && (usernameNgModel.dirty || usernameNgModel.touched)" class="error">
+                                <span *ngIf="usernameNgModel.errors?.['required']" style="color: red;">username is required.</span>  
+                            </div>
+                        </div>
+                        <div class="form-group pb-4">
+                            <label for="email" class="h4">Email<span style="color: red;">*</span></label>
+                            <input type="email" class="form-control form-control-lg" id="email" [(ngModel)]="mail" name="email" required #emailNgModel="ngModel">
+                            <div *ngIf="emailNgModel.invalid && (emailNgModel.dirty || emailNgModel.touched)" class="error">
+                                <span *ngIf="emailNgModel.errors?.['required']" style="color: red;">Email is required.</span>
+                            </div>
+                        </div>
+                        <div class="form-group pb-4">
+                            <label for="password" class="h4">Password<span style="color: red;">*</span></label>
+                            <input type="password" class="form-control form-control-lg" id="password" [(ngModel)]="pass" name="password" required #passwordNgModel="ngModel">
+                            <div *ngIf="passwordNgModel.invalid && (passwordNgModel.dirty || passwordNgModel.touched)" class="error">
+                                <span *ngIf="passwordNgModel.errors?.['required']" style="color: red;">password is required.</span>
+                            </div>
+                        </div>
+                        <p>Already have an account? <a href="a" routerLink="/login">login</a></p>
+                        <button class="btn btn-dark btn-lg" style="color: white; margin: 0 auto; display: block;" [disabled]="signupForm.invalid">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

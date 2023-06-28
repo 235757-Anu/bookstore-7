@@ -1,0 +1,113 @@
+.confirmation-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .confirmation-content {
+    text-align: center;
+  }
+  
+  .confirmation-actions {
+    margin-top: 20px;
+  }
+  .Searchbutton {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin-top: 10%;
+    padding-left: 50%;
+    
+  }
+  
+  .search-input::placeholder {
+    margin-right: 10px;
+    text-align: start;
+  }
+  
+ .form-control {
+    border-radius: 15px;
+    padding: 12px 20px;
+  }
+ .button{
+     padding-left: 1pc;
+     height: 50%;
+ }
+ .body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/16.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  background-color: rgb(223, 219, 215);;
+}  
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+.header .logo img {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.header .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header .nav-links li {
+  margin-right: 20px;
+}
+
+.header .nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header .nav-links li a.btn {
+  border-radius: 12px;
+  padding: 8px 16px;
+}
+.links a {
+  text-decoration: none;
+  color: aliceblue;
+  margin-right: 10px;
+ 
+}
+.links{
+  margin-left: 4rem;
+}
+.links> a{
+  margin-right: 2rem;
+}
+.links a:hover {
+  color:rgb(141, 141, 141); 
+}
