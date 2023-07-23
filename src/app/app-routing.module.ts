@@ -8,9 +8,11 @@ import { HomeComponent } from './home/home.component';
 import { Home1Component } from './home1/home1.component';
 import { ListbookComponent } from './listbook/listbook.component';
 import { LoginComponent } from './login/login.component';
+import { RatingComponent } from './rating/rating.component';
 import { ReadComponent } from './read/read.component';
 import { ReadbookComponent } from './readbook/readbook.component';
 import { ReaditemComponent } from './readitem/readitem.component';
+import { ReadlistComponent } from './readlist/readlist.component';
 import { RegisterComponent } from './register/register.component';
 import { UpdateComponent } from './update/update.component';
 import { UpdateitemComponent } from './updateitem/updateitem.component';
@@ -34,7 +36,9 @@ const routes: Routes = [
   {path:'update',component:UpdateComponent},
   {path:'updateitem',component:UpdateitemComponent},
   {path:'user',component:UserComponent},
-  {path:'readbook',component:ReadbookComponent}
+  {path:'readbook',component:ReadbookComponent},
+  {path:'readlist',component:ReadlistComponent},
+  {path:'rating',component:RatingComponent}
 ];
 
 @NgModule({

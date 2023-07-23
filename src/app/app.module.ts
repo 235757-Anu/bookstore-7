@@ -23,6 +23,8 @@ import { UpdateComponent } from './update/update.component';
 import { UpdateitemComponent } from './updateitem/updateitem.component';
 import { UserComponent } from './user/user.component';
 import { ReadbookComponent } from './readbook/readbook.component';
+import { ReadlistComponent } from './readlist/readlist.component';
+import { RatingComponent } from './rating/rating.component';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { ReadbookComponent } from './readbook/readbook.component';
     UpdateComponent,
     UpdateitemComponent,
     UserComponent,
-    ReadbookComponent
+    ReadbookComponent,
+    ReadlistComponent,
+    RatingComponent
  
   ],
   imports: [

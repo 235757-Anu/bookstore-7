@@ -13,9 +13,11 @@
   </ul>
 </div>
 <div class="body">
- 
   <div *ngIf="book" style="margin-top: 8%; ">
     <div class="col-sm-2">
+      <div *ngIf="successMessage" class="alert alert-success text-top">
+        {{ successMessage }}
+      </div>
       <div class="container">
       <div class="left">
         <img [src]="book.imageUrl" [alt]="book.title" width="100%">
@@ -42,8 +44,8 @@
         </div>
       </div>
       <div class="cl">
-        <button type="button" class="btn btn-outline-secondary" >
-          <span class="m-2">Add to ReadList</span>
+        <button type="button" class="btn btn-outline-secondary" (click)="toReadList(book)">
+          <span class="m-2">{{ isAddedToReadList ? 'Remove from ReadList' : 'Add to ReadList' }}</span>
         </button>
         <button type="button" class="btn btn-outline-secondary" routerLink="/user" >Cancel
         </button>

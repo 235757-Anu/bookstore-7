@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Book } from '../model/book';
@@ -9,7 +10,10 @@ import { Book } from '../model/book';
 })
 export class ReadbookComponent implements OnInit {
   book: Book;
-  constructor(private route: ActivatedRoute) {}
+  successMessage: string;
+  isAddedToReadList: boolean = false;
+
+  constructor(private route: ActivatedRoute,private http: HttpClient) {}
 
   ngOnInit() {
 
@@ -25,6 +29,23 @@ export class ReadbookComponent implements OnInit {
 
     });
 
+  }
+  toReadList(book: Book) {
+    if (this.isAddedToReadList) {
+      this.isAddedToReadList = false; 
+    } else {
+      this.http.post('http://localhost:8200/api/v1/readlist/addtoreadlist', book).subscribe(
+        (response) => {
+          console.log('Book added to readlist:', response);
+          this.isAddedToReadList = true; 
+          this.successMessage = 'The book added successfully.';
+        },
+        (error) => {
+          console.error('Error adding book to readlist:', error);
+          this.successMessage = '';
+        }
+      );
+    }
   }
 
 }

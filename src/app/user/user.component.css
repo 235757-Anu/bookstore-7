@@ -44,7 +44,8 @@
   }
   .body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/17.jpg");
-    padding-top: 150px; /* Add padding to create space */
+    background-size: cover;
+    padding-top: 150px;
     opacity: 0.9;
   }
   .header {

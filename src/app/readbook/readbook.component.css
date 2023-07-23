@@ -46,7 +46,7 @@ img {
     width: 100vw;
 }
 
-button {
+.cl>button {
     width: 20%;
     margin: 2px 7px;
     background-color: rgb(213, 209, 209);
@@ -133,4 +133,7 @@ h1 {
   .header .nav-links li a.btn {
     border-radius: 12px;
     padding: 8px 16px;
+  }
+  .alert {
+      width: 70vw;
   }

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { User } from 'src/app/model/user'
 import { Observable } from 'rxjs';
 import { Book } from './model/book';
+import { Readlist } from './model/readlist';
 
 
 @Injectable({
@@ -17,6 +18,7 @@ export class ServicesService{
         return this.http.post('http://localhost:8000/api/v1/users/register',data);
     }
     bookArr:Book[] =[];
+    
 
     // setSearchData(data: Book) {
     //   this.bookArr.push(data);
@@ -31,6 +33,9 @@ export class ServicesService{
 
     // getBookToView(): Book | null {
     //   return this.selectedBook;
+    // }
+    // getReadlist(): Observable<Readlist[]> {
+    //   return this.http.get<Readlist[]>('http://localhost:8200/api/v1/readlist/readlist');
     // }
   addbook(book:Book):Observable<any>{
     console.log(book)
